@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/slick.css" type="text/css" /> 
     <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
 </head>
 <body>
@@ -28,20 +31,23 @@
                   <div class="collapse navbar-collapse" id="navbar-supported-content">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                       <li class="nav-item selected">
-                        <a class="nav-link" aria-current="page" href="#0" data-no="1">Home</a>
+                        <a class="nav-link" aria-current="page" href="#0" data-no="1">Home <i class="fa-solid fa-house fa-beat-fade"></i></a>
                         <div class="circle"></div>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#0" data-no="2">Imagens</a>
+                        <a class="nav-link" href="#1" data-no="2">Calculadora <i class="fa-solid fa-calculator fa-beat-fade"></i></a>
                         <div class="circle"></div>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#0" data-no="3">Sobre Nós</a>
+                        <a class="nav-link" href="#0" data-no="3">Dados <i class="fa-regular fa-file fa-beat-fade"></i></a>
                         <div class="circle"></div>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#0" data-no="4">Login</a>
+                        <a class="nav-link" href="#0" data-no="4">Feedbacks</a>
                         <div class="circle"></div>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#0" data-no="5">Sair  <i class="fa-solid fa-right-from-bracket fa-beat"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -49,7 +55,7 @@
             </div>
           </div>          
         </div>        
-      </div>      
+      </div> 
       <div class="container-fluid tm-content-container">
         <ul class="cd-hero-slider mb-0 py-5">
           <li class="px-3" data-page-no="1">
@@ -81,99 +87,88 @@
             </div>            
           </li>
           <li data-page-no="2">
-            <!-- Image Carousel -->
-            <div class="mx-auto position-relative gallery-container">
-              <div class="circle intro-circle-1"></div>
-              <div class="circle intro-circle-2"></div>
-              <div class="mx-auto tm-border-top gallery-slider">
-                <figure class="effect-julia item">
-                    <img src="img/lamp-idea.webp" alt="Image">
-                    <figcaption>
-                        <div>
-                            <p>Transformando luz em economia: esse é nosso compromisso com o amanhã!</p>
-                        </div>
-                        <!--  <a href="#">View more</a> -->
-                    </figcaption>
-                </figure>
-                <figure class="effect-julia item">
-                    <img src="img/transmissao.webp" alt="Image">
-                    <figcaption>
-                        <div>
-                            <p>Ponto de partida da eletricidade: estações de transmissão em operação.</p>
-                        </div>
-                        <!--  <a href="#">View more</a> -->
-                    </figcaption>
-                </figure>
-                <figure class="effect-julia item">
-                    <img src="img/sdesol.webp" alt="Image">
-                    <figcaption>
-                        <div>
-                          <p>1. Sustentável <br>
-                             2. Seguro <br>
-                             3. Sistemático <br>
-                             4. Solucionador</p>
-                          
-                        </div>
-                        <!--  <a href="#">View more</a> -->
-                    </figcaption>
-                </figure>
-                <figure class="effect-julia item">
-                    <img src="img/cadeirante.webp" alt="Image">
-                    <figcaption>
-                        <div>
-                            <p>Nosso sistema abre portas e constrói pontes, garantindo acessibilidade para todos, sem limitações.</p>
-                        </div>
-                      <!--  <a href="#">View more</a> -->
-                    </figcaption>
-                </figure>
-                <figure class="effect-julia item">
-                    <img src="img/iphone-coletivo.webp" alt="Image">
-                    <figcaption>
-                        <div>
-                            <p>Visão de construção coletiva e interligação, refletindo a essência do nosso projeto, que une tecnologia e eficiência.</p>
-                        </div>
-                        <!--  <a href="#">View more</a> -->
-                    </figcaption>
-                </figure>
-                <figure class="effect-julia item">
-                    <img src="img/gallery-img-06.jpg" alt="Image">
-                    <figcaption>
-                        <div>
-                            <p>Julia dances in the deep dark</p>
-                        </div>
-                        <!--  <a href="#">View more</a> -->
-                    </figcaption>
-                </figure>
-                <figure class="effect-julia item">
-                    <img src="img/gallery-img-07.jpg" alt="Image">
-                    <figcaption>
-                        <div>
-                            <p>Julia dances in the deep dark</p>
-                        </div>
-                        <!--  <a href="#">View more</a> -->
-                    </figcaption>
-                </figure>
-                <figure class="effect-julia item">
-                    <img src="img/gallery-img-08.jpg" alt="Image">
-                    <figcaption>
-                        <div>
-                            <p>Julia dances in the deep dark</p>
-                        </div>
-                        <!--  <a href="#">View more</a> -->
-                    </figcaption>
-                </figure>
-                <figure class="effect-julia item">
-                    <img src="img/gallery-img-09.jpg" alt="Image">
-                    <figcaption>
-                        <div>
-                            <p>Julia dances in the deep dark</p>
-                        </div>
-                        <!--  <a href="#">View more</a> -->
-                    </figcaption>
-                </figure>
-              </div>
+            <div class="mx-auto position-relative">
+                <div class="mx-auto d-flex justify-content-between">
+                  <form id="consumo-form" class="form">
+                    <div class="form-group">
+                      <h1> Automática</h1>
+                        <label for="tv">Consumo da TV (em watts):</label>
+                        <input type="number" class="form-control" id="tv" placeholder="Ex: 100">
+                    </div>
+                    <div class="form-group">
+                        <label for="geladeira">Consumo da Geladeira (em watts):</label>
+                        <input type="number" class="form-control" id="geladeira" placeholder="Ex: 150">
+                    </div>
+                    <div class="form-group">
+                        <label for="ar-condicionado">Consumo do Ar Condicionado (em watts):</label>
+                        <input type="number" class="form-control" id="ar-condicionado" placeholder="Ex: 1200">
+                    </div>
+                    <div class="form-group">
+                      <label for="maq-roupa">Máquina de Lavar Roupa (em watts):</label>
+                      <input type="number" class="form-control" id="maq-roupa" placeholder="Ex: 1200">
+                  </div>
+                  <div class="form-group">
+                    <label for="chuveiro">Chuveiro elétrico (em watts):</label>
+                    <input type="number" class="form-control" id="chuveiro" placeholder="Ex: 1200">
+                  </div>
+                  <div class="form-group">
+                    <label for="micro-ondas">Micro-ondas (em watts):</label>
+                    <input type="number" class="form-control" id="micro-ondas" placeholder="Ex: 1200">
+                  </div>
+                    <!-- Adicione mais campos conforme necessário para outros dispositivos -->
+                    <button type="button" class="btn btn-primary" id="calcular-btn">Calcular</button>
+                    <div id="resultado"></div>
+                </form>
+                <div id="explicacao">
+                  <h1>Calculadora Automática de Potência de Placa Solar:</h1>
+                  <p>   Nossa <strong> Calculadora Automática - (lado esquerdo) </strong> de potência de placa solar simplifica o processo de determinar a quantidade de placas solares necessárias para atender às suas necessidades de energia. Basta inserir os consumos estimados de energia para diferentes dispositivos elétricos, como televisão, geladeira e ar-condicionado, e nossa calculadora fará o resto. Com base nesses dados, a calculadora determinará automaticamente a quantidade aproximada de placas solares necessárias para alimentar esses dispositivos, considerando uma potência média de geração de energia por placa solar. Isso proporciona uma estimativa rápida e conveniente para ajudá-lo a planejar seu sistema de energia solar.</p>
+
+                  <h1>Cálculo Manual da Potência de Placa Solar:</h1>
+                  <p>Se você preferir fazer os <strong>cálculos manualmente - (lado direito) </strong>, pode seguir estes passos simples. 
+                    <p>Primeiro, determine o consumo de energia total dos dispositivos que deseja alimentar com a placa solar. Isso pode ser feito somando os consumos individuais de energia de cada dispositivo em Watts (W). </p>
+                    <p></p>Em seguida, considere a quantidade de horas por dia em que esses dispositivos serão usados.</p> 
+                    <p>Multiplique o consumo total de energia pelos números de horas de uso por dia para obter o consumo diário total em Watt-horas (Wh). Com essa informação, você pode calcular a potência necessária da placa solar <strong>dividindo o consumo diário total pelo número médio de horas de luz solar disponíveis por dia</strong>.</p>
+                    <p>Este cálculo resultará na potência aproximada da placa solar necessária para atender às suas necessidades de energia. Lembre-se de considerar fatores como eficiência do sistema e variações sazonais na luz solar ao fazer esses cálculos.</p>
+                </div>
+                    <div class="calculadora-section-transparente">
+                        <h1><strong>Manual</strong></h1>
+                        <!-- Alterações no HTML -->
+                          <p id="resultado_calc_"> </p> <!-- Mudança de ID aqui -->
+
+                        <table>                      
+                            <tr>                      
+                                <td><button class="botao" onclick="clean()">C</button></td>
+                                <td><button class="botao" onclick="back()">Del</button></td>
+                                <td><button class="botao" onclick="insert('/')">/</button></td>
+                                <td><button class="botao" onclick="insert('*')">x</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="botao" onclick="insert('7')">7</button></td>
+                                <td><button class="botao"onclick="insert('8')">8</button></td>
+                                <td><button class="botao" onclick="insert('9')">9</button></td>
+                                <td><button class="botao" onclick="insert('-')">-</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="botao" onclick="insert('4')">4</button></td>
+                                <td><button class="botao" onclick="insert('5')">5</button></td>
+                                <td><button class="botao" onclick="insert('6')">6</button></td>
+                                <td><button class="botao" onclick="insert('+')">+</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="botao" onclick="insert('1')">1</button></td>
+                                <td><button class="botao" onclick="insert('2')">2</button></td>
+                                <td><button class="botao" onclick="insert('3')">3</button></td>
+                                <td rowspan="2"><button class="botao2" style="height: 118px;" onclick="calcule()">=</button></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><button class="botao" style="width: 118px;" onclick="insert('0')">0</button></td>
+                                <td><button class="botao" onclick="insert('.')">.</button></td>                      
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
-          </li>
+        </li>
           <li data-page-no="3" class="px-3">
             <div class="position-relative page-width-1 page-right tm-border-top tm-border-bottom">
               <div class="circle intro-circle-1"></div>
@@ -243,6 +238,7 @@
           </li>
         </ul>
     </div>
+            
     <div class="container-fluid">
       <footer class="row mx-auto tm-footer">
         <div class="col-md-6 px-0">
@@ -264,5 +260,6 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/slick.js"></script>
   <script src="js/templatemo-script.js"></script>
+  <script src="js/calc.js"></script>
 </body>
 </html>
