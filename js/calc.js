@@ -41,4 +41,3 @@ function calcule() {
         document.getElementById('resultado_calc_').innerHTML = 'Entrada Inválida!';
     }
 }
-
