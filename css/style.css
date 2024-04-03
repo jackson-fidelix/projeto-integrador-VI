@@ -112,3 +112,184 @@
   align-items: center;
   flex-direction: column; /* Para alinhar os elementos verticalmente */
 }
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #ffffff;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.forgot-password {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Estilo para a seção de login */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+
+.container {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0 0 30px 0 rgb(24, 24, 23);
+}
+
+
+.buttonsForm {
+  margin-top: 40px;
+  position: relative;
+  border-radius: 30px;
+  box-shadow: 0 0 7px 0 green;
+}
+
+.buttonsForm button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  position: relative;
+  padding: 10px 29px;
+}
+
+.btnColor {
+  position: absolute;
+  width: 130px;
+  height: 100%;
+  background: linear-gradient(to right, #98FB98, #ADFF2F);
+  border-radius: 30px;
+  transition: .3s;
+}
+
+input[type="text"], input[type="password"] {
+  border: none;
+  margin-top: 40px;
+  border-radius: 60px;
+  padding: 8px 0 8px 35px;
+  outline: none;
+  width: 100%;
+}
+
+button[type="submit"] {
+  background: #98FB98;
+  color: black;
+  border-radius: 30px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 0 8px 15px;
+  font-size: 15px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.divCheck {
+  margin: 10px 0 0 5px;
+  width: 80%;
+  font-size: 13px;
+}
+
+#signin {
+  left: 25px;
+  position: absolute;
+  margin-top: 80px;
+  transition: .5s;
+  width: 330px;
+  height: 400px;
+}
+
+#signup {
+  left: 450px;
+  position: absolute;
+  margin-top: 80px;
+  transition: .5s;
+  width: 330px;
+  height: 400px;
+}
+
+.iEmail {
+  top: 32px;
+  position: absolute;
+  left: 0;
+  padding: 20px 5px;
+  color: #030303;
+}
+
+.iPassword {
+  top: 116px;
+  position: absolute;
+  left: 0;
+  padding: 20px 5px;
+  color: #030303;
+}
+
+.iPassword2 {
+  top: 200px;
+  position: absolute;
+  left: 0;
+  padding: 20px 5px;
+  color: #030303;
+}
+
+.login-image {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 999; /* Certifique-se de que a imagem esteja acima de outros elementos, se necessário */
+}
+
+.login-image img {
+  width: 600px; /* Defina o tamanho da imagem conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-top: 300px;
+  margin-left: 150px;
+}
+
+#signin,
+#signup {
+  /* Ajuste a margem esquerda para o formulário de login para acomodar a imagem */
+  margin-left: 25px; /* Distância da borda esquerda */
+}
