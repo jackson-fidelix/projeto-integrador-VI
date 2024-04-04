@@ -293,3 +293,43 @@ button[type="submit"] {
   /* Ajuste a margem esquerda para o formulário de login para acomodar a imagem */
   margin-left: 25px; /* Distância da borda esquerda */
 }
+
+.pai {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: rgba(30, 30, 30, 0.3);
+  width: 900px;
+  padding: 50px;
+  border-radius: 20px;
+
+}
+
+.filha {
+  width: calc(33.33% - 20px); /* Defina a largura das divs filhas */
+  margin-bottom: 20px; /* Adiciona margem inferior para espaçamento entre as filhas */
+  background-color: rgba(255, 255, 255, 0.5); /* Cor de fundo das divs filhas */
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0,9);
+  padding: 20px;
+}
+
+.imagem-time {
+  text-align: center; /* Centraliza horizontalmente o conteúdo */
+}
+
+.imagem-time img {
+  width: 190px;
+  height: auto;
+  border-radius: 10%;
+  background-color: #ccc;
+}
+
+.dados {
+  margin-top: 15px;
+  text-align: center;
+  font: normal 18px Arial;
+  color: #171515;
+  margin-bottom: 15px;
+  padding: 10px;
+}
