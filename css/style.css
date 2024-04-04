@@ -51,7 +51,6 @@
   text-align: center; /* Centraliza o texto horizontalmente */
   font-size: 25px; /* Define o tamanho da fonte */
   padding: 10px; /* Adiciona espaço interno ao redor do texto */
-  
 }
 
 .form {
@@ -65,16 +64,13 @@
 
 .form-group {
   margin-bottom: 20px;
-  
 }
 
 .form-control {
-  text-align: center;
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 5px;
-  background-color: rgba(85, 81, 81, 0.8); /* Fundo branco com 80% de transparência */
 }
 
 .btn {
@@ -249,87 +245,81 @@ button[type="submit"] {
   height: 400px;
 }
 
-.iEmail {
-  top: 32px;
+.iEmail, .iPassword, .iPassword2 {
   position: absolute;
-  left: 0;
-  padding: 20px 5px;
-  color: #030303;
-}
-
-.iPassword {
-  top: 116px;
-  position: absolute;
-  left: 0;
-  padding: 20px 5px;
-  color: #030303;
+  top: 6px;
+  left: 6px;
+  transform: translate(0px, 0px);
+  font-size: 20px;
+  pointer-events: none;
+  transition: .5s;
 }
 
 .iPassword2 {
-  top: 200px;
-  position: absolute;
-  left: 0;
-  padding: 20px 5px;
-  color: #030303;
+  top: 48px;
 }
 
-.login-image {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  z-index: 999; /* Certifique-se de que a imagem esteja acima de outros elementos, se necessário */
-}
-
-.login-image img {
-  width: 600px; /* Defina o tamanho da imagem conforme necessário */
-  height: auto; /* Mantém a proporção da imagem */
-  margin-top: 300px;
-  margin-left: 150px;
-}
-
-#signin,
-#signup {
-  /* Ajuste a margem esquerda para o formulário de login para acomodar a imagem */
-  margin-left: 25px; /* Distância da borda esquerda */
+.forgot-password {
+  text-align: center;
+  color: #008B8B;
 }
 
 .pai {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  background: rgba(30, 30, 30, 0.3);
-  width: 900px;
+  background: rgba(255, 255, 255, 0.3);
+  width: 800px;
   padding: 50px;
   border-radius: 20px;
 
 }
 
 .filha {
-  width: calc(33.33% - 20px); /* Defina a largura das divs filhas */
-  margin-bottom: 20px; /* Adiciona margem inferior para espaçamento entre as filhas */
-  background-color: rgba(255, 255, 255, 0.5); /* Cor de fundo das divs filhas */
+  width: calc(45% - 20px);
+  margin-bottom: 20px; /* Adiciona um espaço entre as divs */
+  background-color: rgba(0, 0, 0,);
   border-radius: 15px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0,9);
-  padding: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+  background-color: rgba(77, 76, 76, 0.7);
+  padding: 15px;
 }
 
-.imagem-time {
-  text-align: center; /* Centraliza horizontalmente o conteúdo */
-}
-
-.imagem-time img {
-  width: 190px;
-  height: auto;
+.imagem {
+  width: 130px;
+  height: 130px;
+  margin: 0  auto 5px;
   border-radius: 10%;
   background-color: #ccc;
+  margin-top: 15px;
 }
 
 .dados {
-  margin-top: 15px;
+  margin: 25px;
   text-align: center;
+  font-weight: bold;
   font: normal 18px Arial;
-  color: #171515;
-  margin-bottom: 15px;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.7);
   padding: 10px;
+  border-radius: 10px;
 }
+
+.imagem-time {
+  width: 200px; /* Defina a largura desejada para o contêiner */
+  height: 200px; /* Defina a altura desejada para o contêiner */
+  border-radius: 20px; /* Aplicar raio de borda de 20px */
+  overflow: hidden; /* Para garantir que a imagem fique dentro do contêiner */
+  display: flex; /* Para utilizar flexbox */
+  justify-content: center; /* Para centralizar horizontalmente */
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.imagem-time img {
+  max-width: 100%; /* Para garantir que a imagem ocupe todo o espaço disponível */
+  max-height: 100%; /* Para manter a proporção da imagem */
+  display: block; /* Para remover espaços indesejados */
+  border-radius: 20px; /* Aplicar o mesmo raio de borda para a imagem */
+}
+
