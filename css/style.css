@@ -269,57 +269,92 @@ button[type="submit"] {
   justify-content: space-between;
   flex-wrap: wrap;
   background: rgba(255, 255, 255, 0.3);
-  width: 800px;
-  padding: 50px;
+  width: 90%; /* Alterado para largura relativa */
+  max-width: 800px; /* Largura máxima opcional */
+  padding: 5%; /* Padding relativo */
   border-radius: 20px;
-
+  margin: 0 auto;
 }
+
+/* Media queries para ajustar em diferentes tamanhos de tela */
+@media only screen and (max-width: 768px) {
+  .pai {
+    width: 90%; /* Por exemplo, ajuste para 90% da largura da tela em telas menores que 768px */
+    padding: 20px; /* Ajuste de padding para telas menores */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .pai {
+    width: 90%; /* Por exemplo, ajuste para 90% da largura da tela em telas menores que 480px */
+    padding: 10px; /* Ajuste de padding para telas ainda menores */
+  }
+}
+
 
 .filha {
   width: calc(45% - 20px);
-  margin-bottom: 20px; /* Adiciona um espaço entre as divs */
-  background-color: rgba(0, 0, 0,);
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 15px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
-  background-color: rgba(77, 76, 76, 0.7);
   padding: 15px;
 }
 
-.imagem {
-  width: 130px;
-  height: 130px;
-  margin: 0  auto 5px;
-  border-radius: 10%;
-  background-color: #ccc;
-  margin-top: 15px;
+/* Media query para ajustar estilos em telas menores */
+@media only screen and (max-width: 768px) {
+  .filha {
+    width: calc(50% - 5px); /* Reduzir a largura em telas menores */
+  }
 }
 
+.imagem {
+  width: 30%; /* Porcentagem da largura do contêiner pai */
+  max-width: 130px; /* Largura máxima opcional */
+  height: auto; /* Altura ajustada automaticamente para manter a proporção */
+  margin: 0 auto 15px; /* Margem inferior ajustada para espaçamento */
+  border-radius: 50%; /* Para tornar a imagem circular */
+  background-color: #ccc;
+}
+
+
 .dados {
-  margin: 25px;
+  margin: 2%; /* Margem relativa */
   text-align: center;
+  margin-top: 10%;
   font-weight: bold;
-  font: normal 18px Arial;
+  font-size: 1em; /* Tamanho de fonte ajustado usando em */
   color: #ffffff;
   background: rgba(0, 0, 0, 0.7);
-  padding: 10px;
+  padding: 1em; /* Padding relativo */
   border-radius: 10px;
 }
 
+/* Media query para ajustes em telas menores */
+@media only screen and (max-width: 600px) {
+  .dados {
+    font-size: 0.7em; /* Reduzir tamanho de fonte para telas menores */
+    padding: 0.1em; /* Reduzir padding para telas menores */
+  }
+}
+
+
+
 .imagem-time {
-  width: 200px; /* Defina a largura desejada para o contêiner */
-  height: 200px; /* Defina a altura desejada para o contêiner */
-  border-radius: 20px; /* Aplicar raio de borda de 20px */
+  width: 200px; /* Largura desejada para o contêiner */
+  height: auto; /* Altura ajustada automaticamente para manter a proporção */
+  max-width: 100%; /* Garante que o contêiner não exceda a largura do seu contêiner pai */
+  border-radius: 20px; /* Raio de borda de 20px */
   overflow: hidden; /* Para garantir que a imagem fique dentro do contêiner */
-  display: flex; /* Para utilizar flexbox */
-  justify-content: center; /* Para centralizar horizontalmente */
+  display: flex; /* Utiliza flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
   margin: 0 auto;
   margin-top: 20px;
 }
 
 .imagem-time img {
-  max-width: 100%; /* Para garantir que a imagem ocupe todo o espaço disponível */
-  max-height: 100%; /* Para manter a proporção da imagem */
-  display: block; /* Para remover espaços indesejados */
-  border-radius: 20px; /* Aplicar o mesmo raio de borda para a imagem */
+  width: 100%; /* A imagem ocupa todo o espaço disponível dentro do contêiner */
+  height: auto; /* Altura ajustada automaticamente para manter a proporção */
+  display: block; /* Remove espaços indesejados */
+  border-radius: 20px; /* Aplica o mesmo raio de borda para a imagem */
 }
-
