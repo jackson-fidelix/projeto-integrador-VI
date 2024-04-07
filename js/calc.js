@@ -42,3 +42,15 @@ function calcule() {
     }
 }
 
+/* ------------------------------------TELA DE DADOS - LOGADO------------------------------------ */
+
+document.getElementById('visualizar-btn').addEventListener('click', function() {
+    var frame = document.getElementById('relatorio-frame');
+    var btn = document.getElementById('fechar-btn');
+
+    if (frame.style.display === 'none') {
+        frame.style.display = 'block'; // Mostra o iframe se estiver oculto
+    } else {
+        frame.style.display = 'none'; // Oculta o iframe se estiver visível
+    }
+});
