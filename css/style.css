@@ -361,10 +361,36 @@ button[type="submit"] {
 
 /* ------------------------------------TELA DE DADOS - LOGADO------------------------------------ */
 
-#visualizar-btn {
-  margin: 10px;
-  padding: 10px 20px;
+#geladeira-btn {
+  margin: 20px;
+  padding: 20px;
   font-size: 16px;
+  border-radius: 15px;
+  color: white;
+  background: transparent;
+  border-color: #fff;
+  cursor: pointer;
+}
+
+#ar-btn {
+  margin: 20px;
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 15px;
+  color: white;
+  background: transparent;
+  border-color: #fff;
+  cursor: pointer;
+}
+
+#maq-lavar-btn {
+  margin: 20px;
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 15px;
+  color: white;
+  background: transparent;
+  border-color: #fff;
   cursor: pointer;
 }
 

@@ -44,9 +44,28 @@ function calcule() {
 
 /* ------------------------------------TELA DE DADOS - LOGADO------------------------------------ */
 
-document.getElementById('visualizar-btn').addEventListener('click', function() {
-    var frame = document.getElementById('relatorio-frame');
-    var btn = document.getElementById('fechar-btn');
+document.getElementById('geladeira-btn').addEventListener('click', function() {
+    var frame = document.getElementById('geladeira-frame');
+
+    if (frame.style.display === 'none') {
+        frame.style.display = 'block'; // Mostra o iframe se estiver oculto
+    } else {
+        frame.style.display = 'none'; // Oculta o iframe se estiver visível
+    }
+});
+
+document.getElementById('ar-btn').addEventListener('click', function() {
+    var frame = document.getElementById('ar-condicionado-frame');
+
+    if (frame.style.display === 'none') {
+        frame.style.display = 'block'; // Mostra o iframe se estiver oculto
+    } else {
+        frame.style.display = 'none'; // Oculta o iframe se estiver visível
+    }
+});
+
+document.getElementById('maq-lavar-btn').addEventListener('click', function() {
+    var frame = document.getElementById('maq-lavar-frame');
 
     if (frame.style.display === 'none') {
         frame.style.display = 'block'; // Mostra o iframe se estiver oculto
