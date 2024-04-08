@@ -73,3 +73,33 @@ document.getElementById('maq-lavar-btn').addEventListener('click', function() {
         frame.style.display = 'none'; // Oculta o iframe se estiver visível
     }
 });
+
+document.getElementById('tv-btn').addEventListener('click', function() {
+    var frame = document.getElementById('tv-frame');
+
+    if (frame.style.display === 'none') {
+        frame.style.display = 'block'; // Mostra o iframe se estiver oculto
+    } else {
+        frame.style.display = 'none'; // Oculta o iframe se estiver visível
+    }
+});
+
+document.getElementById('chuveiro-btn').addEventListener('click', function() {
+    var frame = document.getElementById('chuveiro-frame');
+
+    if (frame.style.display === 'none') {
+        frame.style.display = 'block'; // Mostra o iframe se estiver oculto
+    } else {
+        frame.style.display = 'none'; // Oculta o iframe se estiver visível
+    }
+});
+
+document.getElementById('micro-ondas-btn').addEventListener('click', function() {
+    var frame = document.getElementById('micro-ondas-frame');
+
+    if (frame.style.display === 'none') {
+        frame.style.display = 'block'; // Mostra o iframe se estiver oculto
+    } else {
+        frame.style.display = 'none'; // Oculta o iframe se estiver visível
+    }
+});
