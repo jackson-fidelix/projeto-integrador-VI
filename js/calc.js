@@ -44,6 +44,16 @@ function calcule() {
 
 /* ------------------------------------TELA DE DADOS - LOGADO------------------------------------ */
 
+document.getElementById('problem-btn').addEventListener('click', function() {
+    var frame = document.getElementById('problem-frame');
+
+    if (frame.style.display === 'none') {
+        frame.style.display = 'block'; // Mostra o iframe se estiver oculto
+    } else {
+        frame.style.display = 'none'; // Oculta o iframe se estiver visível
+    }
+});
+
 document.getElementById('geladeira-btn').addEventListener('click', function() {
     var frame = document.getElementById('geladeira-frame');
 
