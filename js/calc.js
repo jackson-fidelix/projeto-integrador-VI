@@ -42,6 +42,48 @@ function calcule() {
     }
 }
 
+
+/* ------------------------------------TELA DE LOGIN - INDEX ------------------------------------ */
+document.addEventListener('DOMContentLoaded', function() {
+    const signinForm = document.getElementById('signin');
+    const signupForm = document.getElementById('signup');
+    const btnSignin = document.getElementById('btnSignin');
+    const btnSignup = document.getElementById('btnSignup');
+    const btnColor = document.querySelector('.btnColor'); // Selecionar o elemento btnColor
+  
+    // Mostra o formulário de login ao clicar no botão "Login"
+    btnSignin.addEventListener('click', function() {
+      signupForm.style.left = '450px';
+      signinForm.style.left = '25px';
+      btnColor.style.left = '0px'; // Ajustar o estilo do btnColor
+    });
+  
+    // Mostra o formulário de registro ao clicar no botão "Register"
+    btnSignup.addEventListener('click', function() {
+      signinForm.style.left = '-450px';
+      signupForm.style.left = '25px';
+      btnColor.style.left = '110px'; // Ajustar o estilo do btnColor
+    });
+  
+    // Validação e ação do formulário de login
+    signinForm.addEventListener('submit', function(event) {
+      event.preventDefault(); // Previne o envio padrão do formulário
+  
+      const email = signinForm.querySelector('input[type="text"]').value;
+      const password = signinForm.querySelector('input[type="password"]').value;
+  
+      // Aqui você deve realizar a validação do login
+      if (email.trim() === 'jack_tech@gmail.com' && password.trim() === '1234') {
+        // Login bem-sucedido, redirecionar para outra página
+        window.location.href = 'logado.html';
+      } else {
+        alert('Credenciais inválidas. Por favor, verifique e tente novamente.');
+        signinForm.reset(); // Limpa o formulário após o envio
+      }
+    });
+});
+
+  
 /* ------------------------------------TELA DE DADOS - LOGADO------------------------------------ */
 
 document.getElementById('problem-btn').addEventListener('click', function() {

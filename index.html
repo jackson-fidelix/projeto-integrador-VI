@@ -64,7 +64,7 @@
                     <!--<a rel="sponsored" href="https://getfreepictures.com" target="_blank">Get Free Pictures</a>.--> Com compromisso absoluto com a acessibilidade e sustentabilidade, o <strong>S.O.L -</strong>  abre novos horizontes, iluminando o caminho para uma redução significativa na conta de energia elétrica, sem jamais comprometer o bem-estar e a rotina dos consumidores.  </p>
                   <p class="mb-0">
                   Navegue em nosso site para nos conhecer melhor e a qualquer momento 
-                    <a rel="nofollow" href="#login.html" target="_blank">Faça seu login</a> para desfrutar de nossa ferramenta! </p>
+                    <a rel="nofollow" href="#0" data-page-no="4" class="tm-page-link">Faça seu login</a> para desfrutar de nossa ferramenta! </p>
                 </div>
                 <div class="intro-right">
                   <img src="img/placas-solares.webp" alt="Image" class="img-fluid intro-img-1">
@@ -231,52 +231,45 @@
           </li>
           <li data-page-no="4">
             <div class="mx-auto page-width-2">
-              <div class="row">
-                <div class="col-md-6 me-0 ms-auto">
-                  <h2 class="mb-4">Contact Us</h2>
+                <div class="">
+                       <!--***** Formulário de Login *****-->
+                        <div class="container">
+                        <div class="buttonsForm">
+                          <div class="btnColor"></div>
+                          <button id="btnSignin">Login</button>
+                          <button id="btnSignup">Register</button>
+                        </div>
+                      
+                        <!-- Formulário de Login -->
+                          <form id="signin">
+                            <input type="text" id="email" placeholder="E-mail" required />
+                            <input type="password" id="password" placeholder="Senha" required />
+                            <div class="divCheck">
+                              <input type="checkbox" id="remember" />
+                              <span>Lembrar Senha</span>
+                            </div> <br>
+                            <button type="submit">Entrar</button>
+                          </form>
+        
+                      
+                        <form id="signup">
+                          <input type="text" placeholder="E-mail" required />
+                          <i class="fas fa-envelope iEmail"></i>
+                          <input type="password" placeholder="Senha" required />
+                          <i class="fas fa-lock iPassword"></i>
+                         <input type="password" placeholder="Confirmar Senha" required />
+                         <i class="fas fa-lock iPassword2"></i>
+                          <div class="divCheck">
+                          <input type="checkbox" required />
+                         <span>Termos</span>
+                          </div>
+                          <button type="submit">Cadastrar</button>
+                        </form>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-6 tm-contact-left">
-                  <form action="#" method="POST" class="contact-form">
-                    <div class="input-group tm-mb-30">
-                        <input name="name" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0" placeholder="Name">
-                    </div>
-                    <div class="input-group tm-mb-30">
-                        <input name="email" type="text" class="form-control rounded-0 border-top-0 border-end-0 border-start-0" placeholder="Email">
-                    </div>
-                    <div class="input-group tm-mb-30">
-                        <textarea rows="5" name="message" class="textarea form-control rounded-0 border-top-0 border-end-0 border-start-0" placeholder="Message"></textarea>
-                    </div>
-                    <div class="input-group justify-content-end">
-                        <input type="submit" class="btn btn-primary tm-btn-pad-2" value="Send">
-                    </div>
-                  </form>
-                </div>
-                <div class="col-md-6 tm-contact-right">                  
-                  <p class="mb-4">
-                    Integer erat turpis, vestibulum pellentesque aliquam
-                    ultricies, finibus nec dui. Donec bibendum enim mi,
-                    at tristique leo feugiat at.
-                  </p>
-                  <div>
-                    Email: <a href="mailto:info@company.com" class="tm-link-white">info@company.com</a>
-                  </div>
-                  <div class="tm-mb-45">
-                    Tel: <a href="tel:0100200340" class="tm-link-white">010-020-0340</a>
-                  </div>
-                  <!-- Map -->
-                  <div class="map-outer">
-                    <div class="gmap-canvas">
-                        <iframe width="100%" height="400" id="gmap-canvas"
-                            src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                    </div>
-                </div>
-                </div>
-              </div>
-            </div>            
+            </div>  
           </li>
+          <!--***** final - Formulário de Login *****-->
         </ul>
     </div>
     <div class="container-fluid">
@@ -300,5 +293,6 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/slick.js"></script>
   <script src="js/templatemo-script.js"></script>
+  <script src="js/calc.js"></script>
 </body>
 </html>
