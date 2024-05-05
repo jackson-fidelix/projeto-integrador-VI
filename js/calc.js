@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const password = signinForm.querySelector('input[type="password"]').value;
   
       // Aqui você deve realizar a validação do login
-      if (email.trim() === 'jack_tech@gmail.com' && password.trim() === '1234') {
+      if (email.trim() === 'jackson@gmail.com' && password.trim() === '1234') {
         // Login bem-sucedido, redirecionar para outra página
         window.location.href = 'logado.html';
       } else {
@@ -83,7 +83,89 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-  
+/* ------------------------------------BOTÕES DE AUDIO E VOZ - INDEX------------------------------------ */
+
+function startSpeechRecognition() {
+    let isExpectingPassword = false;
+
+    if ('webkitSpeechRecognition' in window) {
+        const recognition = new webkitSpeechRecognition();
+        recognition.lang = 'pt-BR';
+        recognition.start();
+
+        recognition.onresult = function(event) {
+            const transcript = event.results[0][0].transcript.trim().toLowerCase();
+            console.log('Transcrição:', transcript);
+
+            if (!isExpectingPassword) {
+                const emailField = document.getElementById('email');
+                if (emailField) {
+                    emailField.value = transcript;
+                    isExpectingPassword = true;
+                    console.log('isExpectingPassword:', isExpectingPassword);
+
+                    // Após preencher o e-mail, mudamos para esperar a senha
+                    recognition.stop(); // Interrompe o reconhecimento atual
+                    setTimeout(() => {
+                        recognition.start(); // Reinicia o reconhecimento para a senha
+                    }, 1000); // Espera 1 segundo antes de reiniciar o reconhecimento
+                }
+            } else {
+                const passwordField = document.getElementById('password');
+                if (passwordField) {
+                    passwordField.value = transcript;
+                    isExpectingPassword = false;
+                    console.log('isExpectingPassword:', isExpectingPassword);
+                }
+            }
+        };
+
+        recognition.onerror = function(event) {
+            console.error('Erro no reconhecimento de voz:', event.error);
+        };
+    } else {
+        alert('Este navegador não suporta reconhecimento de voz.');
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const voiceSelect = document.getElementById('voiceSelect');
+    const speakButton = document.getElementById('speakButton');
+
+    let voices = [];
+
+    // Atualiza a lista de vozes disponíveis
+    function populateVoiceList() {
+        voices = speechSynthesis.getVoices();
+        voiceSelect.innerHTML = '';
+
+        voices.forEach((voice, index) => {
+            const option = document.createElement('option');
+            option.value = index;
+            option.textContent = `${voice.name} (${voice.lang})`;
+            voiceSelect.appendChild(option);
+        });
+    }
+
+    // Evento disparado quando as vozes estão carregadas
+    speechSynthesis.onvoiceschanged = () => {
+        populateVoiceList();
+    };
+
+    // Evento de clique no botão "Falar"
+    speakButton.addEventListener('click', () => {
+        const selectedVoice = voices[voiceSelect.value];
+        const message = new SpeechSynthesisUtterance('Olá! Bem-vindo ao sistema. Essa é a tela inicial do SOL - Sistema de Otimização de Luz, esperamos que você possa apriomar seu sistema de energia elétrica, e claro, economizar!'); // Mensagem a ser falada
+
+        message.voice = selectedVoice;
+        speechSynthesis.speak(message);
+    });
+});
+
+
+
+
 /* ------------------------------------TELA DE DADOS - LOGADO------------------------------------ */
 
 document.getElementById('problem-btn').addEventListener('click', function() {
@@ -155,3 +237,4 @@ document.getElementById('micro-ondas-btn').addEventListener('click', function() 
         frame.style.display = 'none'; // Oculta o iframe se estiver visível
     }
 });
+

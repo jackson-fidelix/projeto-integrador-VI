@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/slick.css" type="text/css" /> 
     <link rel="stylesheet" href="css/templatemo-style.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
 </head>
@@ -59,9 +60,13 @@
               <div class="d-flex position-relative tm-border-top tm-border-bottom intro-container">
                 <div class="intro-left tm-bg-dark">
                   <h2 class="mb-4">Sejam Bem-Vindos ao S.O.L</h2>
-                  <p class="mb-4">
-                    S.O.L - Sistema de Otimização de Luz <br>
-                    <!--<a rel="sponsored" href="https://getfreepictures.com" target="_blank">Get Free Pictures</a>.--> Com compromisso absoluto com a acessibilidade e sustentabilidade, o <strong>S.O.L -</strong>  abre novos horizontes, iluminando o caminho para uma redução significativa na conta de energia elétrica, sem jamais comprometer o bem-estar e a rotina dos consumidores.  </p>
+
+                  <h4>Escolha uma voz: <select id="voiceSelect"></select>
+                    <button onclick="reproduzirInstrucao()" id="speakButton"> <i class="fa-solid fa-headphones fa-bounce"></i></button></h4>  <br> 
+                    
+                    <p class="mb-4">
+                    S.O.L - Sistema de Otimização de Luz<br>
+                   Com compromisso absoluto com a acessibilidade e sustentabilidade, o <strong>S.O.L -</strong>  abre novos horizontes, iluminando o caminho para uma redução significativa na conta de energia elétrica, sem jamais comprometer o bem-estar e a rotina dos consumidores.  </p>
                   <p class="mb-0">
                   Navegue em nosso site para nos conhecer melhor e a qualquer momento 
                     <a rel="nofollow" href="#0" data-page-no="4" class="tm-page-link">Faça seu login</a> para desfrutar de nossa ferramenta! </p>
@@ -230,10 +235,11 @@
             </div>         
           </li>
           <li data-page-no="4">
-            <div class="mx-auto page-width-2">
-                <div class="">
+            <div class="mx-auto page-width-2">    
+                <div class=""> 
+                  <H3 id="fala-email" class="mx-auto" >Clique no botão para preencer seu e-mail com a fala <button onclick="startSpeechRecognition()" id="btnlogin"> <i class="fa-solid fa-microphone-lines"></i></H3>   
                        <!--***** Formulário de Login *****-->
-                        <div class="container">
+                        <div class="container"> 
                         <div class="buttonsForm">
                           <div class="btnColor"></div>
                           <button id="btnSignin">Login</button>
@@ -241,7 +247,7 @@
                         </div>
                       
                         <!-- Formulário de Login -->
-                          <form id="signin">
+                          <form id="signin"> 
                             <input type="text" id="email" placeholder="E-mail" required />
                             <input type="password" id="password" placeholder="Senha" required />
                             <div class="divCheck">
