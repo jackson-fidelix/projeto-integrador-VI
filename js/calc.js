@@ -129,7 +129,52 @@ function startSpeechRecognition() {
 }
 
 
+// Configuração para o botão de Index - Logado
+    document.addEventListener('DOMContentLoaded', function() {
+        const speakButton = document.getElementById('speakIndexLogado');
+  
+        if (speakButton) {
+      speakButton.addEventListener('click', function() {
+        const message = new SpeechSynthesisUtterance('Em primeiro lugar, queremos agradecer por acreditar em nosso trabalho e se tornar um apoiador ou apoiadora. Seja BEM-VINDO à área de membros. Espero que aproveite ao máximo todas as funcionalidades do nosso sistema!');
+        speechSynthesis.speak(message);
+      });
+    } else {
+      console.error('Elemento speakIndexLogado não encontrado.');
+    }
+  });
+
+// Configuração para o botão de Calculadoras - Logado
+  document.addEventListener('DOMContentLoaded', function() {
+    const speakButton = document.getElementById('speakCalc');
+  
+    if (speakButton) {
+      speakButton.addEventListener('click', function() {
+        const message = new SpeechSynthesisUtterance('Essas são as nossas calculadoras, automática e manual. No centro deixamos uma breve explicação de como usá-las, fique a vontade para fazer seus cálculos e verificar a quantidade de placas solares necessárias para sua residência!');
+        speechSynthesis.speak(message);
+      });
+    } else {
+      console.error('Elemento speakCalc não encontrado.');
+    }
+  });
+  
+// Configuração para o botão de Dados - Logado
+  document.addEventListener('DOMContentLoaded', function() {
+    const speakButton = document.getElementById('speakDados');
+  
+    if (speakButton) {
+      speakButton.addEventListener('click', function() {
+        const message = new SpeechSynthesisUtterance('Você chegou a umas das telas mais importantes do nosso site. Aqui é onde você terá acesso a relatórios e pesquisas realizados por nossa equipe com a comunidade externa e em laboratório. Aproveite ao máximo essa seção, pois ela tem muito a agregar em seu dia-a-dia, e claro, no uso de nossa ferramenta!');
+        speechSynthesis.speak(message);
+      });
+    } else {
+      console.error('Elemento speakDados não encontrado.');
+    }
+  });
+  
+  
+
 document.addEventListener('DOMContentLoaded', () => {
+
     // Configuração para o botão de fala do índice
     setupSpeechSynthesis('speakIndex', 'Olá! Sejam Bem-Vindos ao SOL - Sistema de Otimização de Luz. Navegue em nosso site para conhecer melhor nossa solução!', 'pt-BR');
 
@@ -137,9 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setupSpeechSynthesis('speakGaleria', 'Agora você chegou na tela de Galeria, aqui você encontrará nossa proposta de solução, incluindo acessibilidade e sustentabilidade. Estamos juntos nessa luta!', 'pt-BR');
     // Configuração para o botão de fala de Sobre Nós
     setupSpeechSynthesis('speakSobreNos', 'Essa é a aba "Sobre Nós", Conheça um pouco da nossa história e da nossa equipe. Estamos felizes por termos vocês conosco!', 'pt-BR');
-
-    // Configuração para o botão de Index - Logado
-    setupSpeechSynthesis('speakIndexLogado', 'Em primeiro lugar, queremos agradecer por acreditar em nosso trabalho e se tornar um apoiador(a). Seja BEM-VINDO à área de membros. Espero que aproveite ao máximo todas as funcionalidades do nosso sistema!', 'pt-BR');
 
     // Função genérica para configurar botão de fala
     function setupSpeechSynthesis(speakButtonId, messageText, lang) {
