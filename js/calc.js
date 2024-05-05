@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-/* ------------------------------------BOTÕES DE AUDIO E VOZ - INDEX------------------------------------ */
+/* ------------------------------------ BOTÕES DE AUDIO E VOZ - INDEX E LOGADO ------------------------------------ */
 
 function startSpeechRecognition() {
     let isExpectingPassword = false;
@@ -130,39 +130,37 @@ function startSpeechRecognition() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const voiceSelect = document.getElementById('voiceSelect');
-    const speakButton = document.getElementById('speakButton');
+    // Configuração para o botão de fala do índice
+    setupSpeechSynthesis('speakIndex', 'Olá! Sejam Bem-Vindos ao SOL - Sistema de Otimização de Luz. Navegue em nosso site para conhecer melhor nossa solução!', 'pt-BR');
 
-    let voices = [];
+    // Configuração para o botão de fala da Galeria
+    setupSpeechSynthesis('speakGaleria', 'Agora você chegou na tela de Galeria, aqui você encontrará nossa proposta de solução, incluindo acessibilidade e sustentabilidade. Estamos juntos nessa luta!', 'pt-BR');
+    // Configuração para o botão de fala de Sobre Nós
+    setupSpeechSynthesis('speakSobreNos', 'Essa é a aba "Sobre Nós", Conheça um pouco da nossa história e da nossa equipe. Estamos felizes por termos vocês conosco!', 'pt-BR');
 
-    // Atualiza a lista de vozes disponíveis
-    function populateVoiceList() {
-        voices = speechSynthesis.getVoices();
-        voiceSelect.innerHTML = '';
+    // Configuração para o botão de Index - Logado
+    setupSpeechSynthesis('speakIndexLogado', 'Em primeiro lugar, queremos agradecer por acreditar em nosso trabalho e se tornar um apoiador(a). Seja BEM-VINDO à área de membros. Espero que aproveite ao máximo todas as funcionalidades do nosso sistema!', 'pt-BR');
 
-        voices.forEach((voice, index) => {
-            const option = document.createElement('option');
-            option.value = index;
-            option.textContent = `${voice.name} (${voice.lang})`;
-            voiceSelect.appendChild(option);
+    // Função genérica para configurar botão de fala
+    function setupSpeechSynthesis(speakButtonId, messageText, lang) {
+        const speakButton = document.getElementById(speakButtonId);
+
+        // Evento de clique no botão "Falar"
+        speakButton.addEventListener('click', () => {
+            const message = new SpeechSynthesisUtterance(messageText);
+            message.lang = lang; // Define o idioma da mensagem
+
+            // Defina a voz padrão aqui
+            const defaultVoice = speechSynthesis.getVoices().find(voice => voice.lang === lang);
+            if (defaultVoice) {
+                message.voice = defaultVoice;
+                speechSynthesis.speak(message);
+            } else {
+                console.error('Voz padrão não encontrada para o idioma:', lang);
+            }
         });
     }
-
-    // Evento disparado quando as vozes estão carregadas
-    speechSynthesis.onvoiceschanged = () => {
-        populateVoiceList();
-    };
-
-    // Evento de clique no botão "Falar"
-    speakButton.addEventListener('click', () => {
-        const selectedVoice = voices[voiceSelect.value];
-        const message = new SpeechSynthesisUtterance('Olá! Bem-vindo ao sistema. Essa é a tela inicial do SOL - Sistema de Otimização de Luz, esperamos que você possa apriomar seu sistema de energia elétrica, e claro, economizar!'); // Mensagem a ser falada
-
-        message.voice = selectedVoice;
-        speechSynthesis.speak(message);
-    });
 });
-
 
 
 

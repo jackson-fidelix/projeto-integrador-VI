@@ -447,23 +447,45 @@ iframe {
 }
 
 /*------------------------BOTÕES DE AUDIO E VOZ----------------------------------*/
-#speakButton {
+#speakIndex {
   padding: 10px;
-  font-size: 15px;
+  font-size: 20px;
   border-radius: 10px;
   color: rgb(250, 248, 248);
   background: transparent;
-  border-color: #ffffff;
+  border-color: #7fee63;
   cursor: pointer;
 }
 
-select {
-  padding: 5px;
-  font-size: 15px;
-  margin-bottom: 10px;
-  margin-right: 10px;
+#speakGaleria {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: rgb(250, 248, 248);
+  background: transparent;
+  border-color: #7fee63;
+  cursor: pointer;
 }
 
+#speakSobreNos {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: rgb(250, 248, 248);
+  background: transparent;
+  border-color: #7fee63;
+  cursor: pointer;
+}
+
+#speakIndexLogado {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: rgb(250, 248, 248);
+  background: transparent;
+  border-color: #e0ee63;
+  cursor: pointer;
+}
 
 #fala-email {
   margin: 30px;
@@ -482,6 +504,13 @@ select {
   border-radius: 10px;
   color: rgb(250, 248, 248);
   background: transparent;
-  border-color: #80ee64;
+  border-color: #7fee63;
   cursor: pointer;
+}
+h4 {
+  color: #7fee63;
+}
+
+h5 {
+  color: #e0ee63;
 }
