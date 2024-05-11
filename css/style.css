@@ -528,7 +528,7 @@ iframe {
   cursor: pointer;
 }
 h4 {
-  color: #7fee63;
+  color: rgb(127, 238, 99);
 }
 
 h5 {
@@ -566,3 +566,53 @@ h5 {
   align-content: center;
   padding: 30px;
 }
+
+/* ------------------------------------BOTÃO WHATSAPP------------------------------------ */
+
+/* Estilos para o botão flutuante do WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-button img {
+  width: 100px; /* Tamanho do ícone do WhatsApp */
+  height: auto;
+  border-radius: 50%; /* Para tornar o ícone redondo, se desejado */
+  box-shadow: 0 2px 4px rgb(127, 238, 99); /* Sombra suave */
+}
+
+
+/* ------------------------------------BOTÃO USER LOGADO------------------------------------ */
+
+#userProfile {
+  cursor: pointer; /* Adicione isso para mostrar que é clicável */
+  padding: 2px; /* Adiciona um espaçamento interno */
+  color: white; /* Cor do texto */
+  margin-top: 5px;
+  width: auto;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  background-color: rgba(255, 255, 255, 0.2);
+  align-items: center; /* Ajuste para centralizar verticalmente */
+  margin-left: auto; /* Alinha o elemento à direita */
+}
+
+#userProfile i {
+  margin-right: 1px; /* Adiciona um espaçamento à direita para o ícone */
+}
+
+    .right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      cursor: pointer; /* Adicione isso para mostrar que é clicável */
+      padding: 5px;
+      box-shadow: #cccccc;
+      color: rgba(255, 0, 0, 0.7);
+  }
+
+  .right span {
+      margin-left: 5px; /* Adicione um espaçamento entre o ícone e o texto */
+  }

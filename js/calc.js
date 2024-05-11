@@ -278,3 +278,17 @@ document.getElementById('micro-ondas-btn').addEventListener('click', function() 
     }
 });
 
+
+/* ------------------------------------BOTÃO USER LOGADO------------------------------------ */
+
+// Adiciona um evento de clique ao elemento com ID 'userProfile'
+document.getElementById('userProfile').addEventListener('click', function() {
+    // Aqui você pode exibir uma mensagem de confirmação ou abrir um modal para o logout
+    var confirmLogout = confirm('Deseja realmente sair?');
+    
+    // Se o usuário confirmar o logout, você pode redirecioná-lo para a página de login
+    if (confirmLogout) {
+        // Redireciona o usuário para a página de login
+        window.location.href = 'index.html'; // substitua 'logout.html' pelo seu URL de logout
+    }
+});
