@@ -1,0 +1,12 @@
+{
+  "name": "sol-system",
+  "version": "1.0.0",
+  "description": "Sol - Sistema de Otimização de Luz. Visando manter a alta qualidade do uso de energia elétrica e reduzindo o gasto energético, criamos o SOL. Um sistema simples, sustentável e que contém acessibilidade, para que cheguemos a inclusão de PcD!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1" // Adicione suas dependências aqui
+  }
+}
